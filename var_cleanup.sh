@@ -1,4 +1,4 @@
-AMAZRUSEABQ3D03:/khoj/scripts >cat var_cleanup.sh
+cat var_cleanup.sh
 #!/bin/bash
 ##############################################################################################################################
 # ScriptName :  var_cleanup.sh
