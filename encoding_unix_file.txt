@@ -1,0 +1,8 @@
+amdc1axhha01:root# file -i vmbackup.conf
+vmbackup.conf: text/plain; charset=utf-8
+
+amdc1axhha01:root# iconv -f utf-8 -t ASCII vmbackup.conf > vmbackup.conf_ascii
+
+amdc1axhha01:root#  file -i vmbackup.conf
+vmbackup.conf: text/plain; charset=us-ascii
+amdc1axhha01:root#
