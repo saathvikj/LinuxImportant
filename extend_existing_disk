@@ -1,0 +1,31 @@
+1. # hash the mount point 
+2. rhelrepoclient03:/test >fdisk -l
+Disk /dev/sdd: 107.4 GB, 107374182400 bytes, 209715200 sectors
+3. rhelrepoclient03:/test >lsblk 
+sdc                8:32   0  100G  0 disk
+└─testvg-lv_test 253:0    0   90G  0 lvm
+4. Shutdown Server
+5. Disk > COnfiguration put new size of disk.
+6. power up
+7. rhelrepoclient03:/root >fdisk -l /dev/sdc
+Disk /dev/sdc: 322.1 GB, 322122547200 bytes, 629145600 sectors
+8. rhelrepoclient03:/root >lsblk | grep sdc
+sdc                8:32   0  300G  0 disk
+9.rhelrepoclient03:/root >vgs
+   VG     #PV #LV #SN Attr   VSize    VFree
+   testvg   1   1   0 wz--n- <200.00g <110.00g
+10.rhelrepoclient03:/root >pvs
+  PV         VG     Fmt  Attr PSize    PFree
+  /dev/sdc   testvg lvm2 a--  <200.00g <110.00g
+11.rhelrepoclient03:/root >pvresize  /dev/sdc
+  Physical volume "/dev/sdc" changed
+  1 physical volume(s) resized / 0 physical volume(s) not resized
+12.rhelrepoclient03:/root >pvs
+  PV         VG     Fmt  Attr PSize    PFree
+  /dev/sdc   testvg lvm2 a--  <300.00g <210.00g
+13.rhelrepoclient03:/root >vgs
+  VG     #PV #LV #SN Attr   VSize    VFree
+  testvg   1   1   0 wz--n- <300.00g <210.00g
+14. rhelrepoclient03:/root >lvextend -L +2G /dev/mapper/testvg-lv_test
+15. rhelrepoclient03:/root >xfs_growfs /dev/mapper/testvg-lv_test
+16. rhelrepoclient03:/root >mount /dev/mapper/testvg-lv_test /test
