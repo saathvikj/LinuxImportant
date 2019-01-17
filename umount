@@ -1,0 +1,12 @@
+If you cannot unmount a file system because "device is busy" and you are not in that directory, there is probably a process working in one of the subdirectories. You can see the process ID and owner of the offending program with the fuser command:
+# umount /mnt
+umount: /mnt: device is busy
+umount: /mnt: device is busy
+# fuser -mu /mnt
+/mnt: 25781c(root)
+# kill -9 25781
+# umount /mnt
+
+If you still cannot unmount the fs, or fuser hangs, try the "lazy" option to umount:
+# umount -f -l /mnt
+
