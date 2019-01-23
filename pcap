@@ -1,0 +1,3 @@
+nohup tcpdump -C 500 -vvv -s0 -w filename_trace.pcap &
+				
+nohup tcpping -d -C filename.blob.core.windows.net 443 > filename_tcpping.txt &
