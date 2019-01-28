@@ -225,3 +225,43 @@ vgroot-lv01             dm-16            8:64                                   
 vgswap-lvswap           dm-3             8:32                                                                       sdc
 vgoradata-dw3_CDWP_lv   dm-1             8:176,8:144,8:96,8:224,8:112,8:128,8:192,8:160                             sdl,sdj,sdg,sdo,sdh,sdi,sdm,sdk
 
+
+
+
+
+
+
+
+hostname:/root >lvs --segments -o+lv_uuid,lv_kernel_major,lv_kernel_minor,devices
+  LV            VG         Attr       #Str Type    SSize   LV UUID                                KMaj KMin Devices                                                          
+  lv01          vgdata     -wi-ao----    1 linear  200.00g xBuKV2-Bgb0-q41y-H22B-z3Wm-mZGu-Ic8Ugj  249   15 /dev/sdd(0)                                                      
+  oraarch_lv    vgoraarch  -wi-ao----    4 striped   1.00t ycWglA-DAGp-ohDN-R3uU-NdfO-3enx-QaxgAi  249   12 /dev/sdz(0),/dev/sdab(0),/dev/sdaa(0),/dev/sdy(0)                
+  oradiag_lv    vgoraarch  -wi-ao----    4 striped 200.00g HZ5GHD-XG1c-jL0y-m5Al-yn1e-If6A-T9A0B4  249   14 /dev/sdz(196608),/dev/sdab(196608),/dev/sdaa(196608),/dev/sdy(196608)
+  oraexports_lv vgoraarch  -wi-ao----    4 striped   2.00t ixAq6w-52EY-A1VY-XPTo-c9yf-t0kV-Pzl2Gc  249   13 /dev/sdz(65536),/dev/sdab(65536),/dev/sdaa(65536),/dev/sdy(65536)
+  dw3_CDWP_lv   vgoradata  -wi-ao----    4 striped  15.98t kWkuVE-HppS-HLT5-GBlV-I2eE-Jdrn-rld5BV  249    1 /dev/sdk(0),/dev/sdm(0),/dev/sdi(0),/dev/sdh(0)                  
+  dw3_CDWP_lv   vgoradata  -wi-ao----    4 striped  <4.02t kWkuVE-HppS-HLT5-GBlV-I2eE-Jdrn-rld5BV  249    1 /dev/sdo(38400),/dev/sdg(38400),/dev/sdj(38400),/dev/sdl(38400)  
+  dw3_CDWP_lv   vgoradata  -wi-ao----    2 striped   4.00t kWkuVE-HppS-HLT5-GBlV-I2eE-Jdrn-rld5BV  249    1 /dev/sdj(356048),/dev/sdl(356048)                                
+  ms3_CMPD_lv   vgoradata  -wi-ao----    5 striped 750.00g cE13bt-j0Yd-ldYe-JcHS-3HoQ-TA9d-2XOdtp  249    0 /dev/sdo(0),/dev/sdg(0),/dev/sdj(0),/dev/sdl(0),/dev/sdf(0)      
+  ms3_CMPD_lv   vgoradata  -wi-ao----    5 striped 274.00g cE13bt-j0Yd-ldYe-JcHS-3HoQ-TA9d-2XOdtp  249    0 /dev/sdo(982122),/dev/sdg(982122),/dev/sdj(982122),/dev/sdl(982122),/dev/sdf(982122)
+  ods3_CODP_lv  vgoradata  -wi-ao----    4 striped  10.38t i2bfst-kMMu-HpL9-HLNu-PJTg-vrkZ-9y5pji  249    2 /dev/sdf(38400),/dev/sdn(0),/dev/sdo(301569),/dev/sdg(301569)    
+  ods3_CODP_lv  vgoradata  -wi-ao----    4 striped 803.12g i2bfst-kMMu-HpL9-HLNu-PJTg-vrkZ-9y5pji  249    2 /dev/sdf(718953),/dev/sdn(680553),/dev/sdo(996151),/dev/sdg(996151)
+  ods3_CODP_lv  vgoradata  -wi-ao----    4 striped 851.23g i2bfst-kMMu-HpL9-HLNu-PJTg-vrkZ-9y5pji  249    2 /dev/sdj(301569),/dev/sdl(301569),/dev/sdf(770353),/dev/sdn(731953)
+  ods3_CODP_lv  vgoradata  -wi-ao----    4 striped   1.55t i2bfst-kMMu-HpL9-HLNu-PJTg-vrkZ-9y5pji  249    2 /dev/sdf(824832),/dev/sdn(786432),/dev/sdj(880336),/dev/sdl(880336)
+  ods3_CODP_lv  vgoradata  -wi-ao----    4 striped 457.59g i2bfst-kMMu-HpL9-HLNu-PJTg-vrkZ-9y5pji  249    2 /dev/sdj(996151),/dev/sdl(996151),/dev/sdf(926618),/dev/sdn(888218)
+  dw1_CDWP_alv  vgoraredo  -wi-ao----    3 striped  20.00g AekKOx-TZ4h-4rlv-9Zoe-Q910-ehpd-FSejRx  249    9 /dev/sdu(6828),/dev/sdw(6828),/dev/sdv(6828)                     
+  dw2_CDWP_blv  vgoraredo  -wi-ao----    3 striped  20.00g vO6172-zbEG-sfJD-YAND-uphI-CZZD-zR8S5D  249   10 /dev/sdu(8535),/dev/sdw(8535),/dev/sdv(8535)                     
+  ms1_CMPD_alv  vgoraredo  -wi-ao----    3 striped  20.00g xc7k1q-MSk8-z3Ok-7k6z-aYS8-VJCY-IcccPM  249    5 /dev/sdu(0),/dev/sdw(0),/dev/sdv(0)                              
+  ms2_CMPD_blv  vgoraredo  -wi-ao----    3 striped  20.00g eoPgau-4byB-dhGP-bEA0-RgG8-PJdV-m70bHA  249    6 /dev/sdu(1707),/dev/sdw(1707),/dev/sdv(1707)                     
+  ods1_CODP_alv vgoraredo  -wi-ao----    3 striped  20.00g pY5wZm-CqfI-0ZFo-t5Dc-Vzfp-Q32V-yCGiIc  249    7 /dev/sdu(3414),/dev/sdw(3414),/dev/sdv(3414)                     
+  ods2_CODP_blv vgoraredo  -wi-ao----    3 striped  20.00g AiWhpT-R7w5-VgBO-Ly1j-t7J1-TacL-HillPW  249    8 /dev/sdu(5121),/dev/sdw(5121),/dev/sdv(5121)                     
+  sbuac_lv      vgoraredo  -wi-ao----    1 linear   12.00g LeX13W-lTL2-IX9K-phJ7-ZGyE-LgEx-mXnggX  249   11 /dev/sdu(10242)                                                  
+  orastage_lv   vgorastage -wi-ao----    6 striped  23.99t 0E2spL-ZAmR-dpPU-aOlJ-td7O-i2i2-100bcJ  249    4 /dev/sdp(0),/dev/sdq(0),/dev/sdt(0),/dev/sdr(0),/dev/sds(0),/dev/sdx(0)
+  orastage_lv   vgorastage -wi-ao----    6 striped <23.91t 0E2spL-ZAmR-dpPU-aOlJ-td7O-i2i2-100bcJ  249    4 /dev/sdac(0),/dev/sdad(0),/dev/sdae(0),/dev/sdah(0),/dev/sdaf(0),/dev/sdag(0)
+  lv01          vgroot     -wi-ao----    1 linear    8.00g 01JCcX-NO0e-3ES7-jXdK-dBIT-qJwq-mn39DY  249   16 /dev/sde(0)                                                      
+  lv02          vgroot     -wi-ao----    1 linear    8.00g 4s5N8Y-jdjj-9ZF1-wpYn-j6Vv-y96c-8j1FxM  249   17 /dev/sde(2048)                                                   
+  lv03          vgroot     -wi-ao----    1 linear    8.00g 08vF7D-wNdI-0fiK-1QTF-c0mD-BpsY-q5fZo1  249   18 /dev/sde(4096)                                                   
+  lv04          vgroot     -wi-ao----    1 linear    5.00g wf7xBK-MEAO-2ZU8-Ds1W-4X27-WbP0-SSwCDF  249   19 /dev/sde(6144)                                                   
+  lv05          vgroot     -wi-ao----    1 linear    8.00g zcMFsp-jfyo-zH7l-2NjO-wNG4-k0zN-w8NSfT  249   20 /dev/sde(7424)                                                   
+  lvswap        vgswap     -wi-ao----    1 linear   20.00g Ig9aeP-Ohnm-TLlq-nWfe-8yDs-PXch-fhEEVX  249    3 /dev/sdc(0)                                                      
+hostname:/root >
+
