@@ -1,0 +1,227 @@
+
+hostname:/root >sar 2 20  -d  | awk '$9 > 8{print $0}'
+10:39:25 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:27 AM   dev8-32      0.50      0.00      8.00     16.00      0.32     80.00    633.00     31.65
+10:39:27 AM  dev65-64     94.50     16.00  42094.00    445.61      0.82      8.58      4.59     43.40
+10:39:27 AM  dev249-3      4.00      0.00     32.00      8.00      0.95     20.00     79.38     31.75
+10:39:27 AM dev249-10    297.50      0.00  62785.00    211.04      3.14     10.59      1.76     52.35
+10:39:27 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:29 AM  dev65-80     79.50     80.00  33877.00    427.13      0.65      8.29      4.33     34.40
+10:39:29 AM dev249-10    241.00      0.00  50605.00    209.98      2.57     10.76      1.93     46.40
+10:39:29 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:31 AM   dev8-32      0.50      0.00     24.00     48.00      0.10   2755.00    199.00      9.95
+10:39:31 AM dev249-10    232.00    832.00  42547.00    186.98      2.20      9.48      2.01     46.60
+10:39:31 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:33 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:35 AM   dev8-32      2.00      0.00    216.00    108.00      0.86    852.25    430.50     86.10
+10:39:35 AM  dev249-3     26.50      0.00    212.00      8.00     13.22    498.94     32.49     86.10
+10:39:35 AM dev249-10     73.00      0.00  12628.50    172.99      0.70      9.64      2.45     17.90
+10:39:35 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:37 AM   dev8-32      1.50      0.00     52.00     34.67      2.55     81.67    667.00    100.05
+10:39:37 AM  dev65-80     48.00      0.00  21054.00    438.62      0.44      9.16      5.02     24.10
+10:39:37 AM  dev249-3     48.50      0.00    388.00      8.00     49.25     12.58     20.63    100.05
+10:39:37 AM dev249-10    143.50     16.00  31475.00    219.45      1.64     11.45      2.17     31.20
+10:39:37 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:39 AM   dev8-32      1.50      0.00     40.00     26.67      4.56     55.33    667.33    100.10
+10:39:39 AM  dev65-80     28.50     16.00  13911.00    488.67      0.29     10.35      5.39     15.35
+10:39:39 AM dev249-10     92.50      0.00  20151.50    217.85      1.17     12.61      1.97     18.20
+10:39:39 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:41 AM   dev8-32      1.00      0.00    236.00    236.00     10.42     60.50    999.00     99.90
+10:39:41 AM   dev8-64     39.00      0.00  13032.00    334.15      2.44     62.53      3.81     14.85
+10:39:41 AM dev65-128      1.50      0.00     16.00     10.67      0.12     82.00     81.00     12.15
+10:39:41 AM dev65-160      1.00      0.00     32.00     32.00      0.24    241.00    120.50     12.05
+10:39:41 AM dev65-144      1.50      0.00     16.00     10.67      0.36    241.00     80.33     12.05
+10:39:41 AM dev65-176      1.50      0.00     16.00     10.67      0.36    241.33     80.67     12.10
+10:39:41 AM  dev249-8      4.00      0.00    406.00    101.50      0.04     10.88      8.12      3.25
+10:39:41 AM dev249-10     75.50      0.00  15854.50    209.99      1.09     14.40      3.56     26.85
+10:39:41 AM dev249-14      6.00      0.00     80.00     13.33      1.21    201.33     20.42     12.25
+10:39:41 AM dev249-16      0.50      0.00      4.00      8.00      0.03     66.00     66.00      3.30
+10:39:41 AM dev249-17      2.00      0.00     28.00     14.00      0.14     72.00     72.00     14.40
+10:39:41 AM dev249-18      0.50      0.00      4.00      8.00      0.09    188.00    188.00      9.40
+10:39:41 AM dev249-19     34.50      0.00  12996.00    376.70      2.29     66.43      4.10     14.15
+10:39:41 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:43 AM   dev8-32     13.50      0.00   5896.00    436.74      1.89   1428.26     30.96     41.80
+10:39:43 AM  dev65-64     24.00     32.00  12288.00    513.33      0.26     10.50      5.92     14.20
+10:39:43 AM  dev249-3    100.50      0.00    804.00      8.00    119.99   9805.21      4.15     41.70
+10:39:43 AM dev249-10     85.50     16.00  18133.00    212.27      1.05     11.98      1.82     15.60
+10:39:43 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:45 AM   dev8-32     10.00      0.00    504.00     50.40      1.26    125.85     32.75     32.75
+10:39:45 AM  dev249-3     63.00      0.00    504.00      8.00      8.71    138.21      5.20     32.75
+10:39:45 AM dev249-20      0.50      0.00      4.00      8.00      0.00      9.00      9.00      0.45
+10:39:45 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:47 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:49 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:51 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:53 AM   dev8-32      4.00      0.00    500.00    125.00      0.47    118.62    118.62     47.45
+10:39:53 AM  dev249-3     62.50      0.00    500.00      8.00      5.21     83.38      7.59     47.45
+10:39:53 AM  dev249-9     76.00    672.00  10009.50    140.55      0.63      8.29      2.22     16.85
+10:39:53 AM dev249-10     55.00     16.00  10009.50    182.28      0.55     10.06      2.15     11.80
+10:39:53 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:55 AM  dev65-64     17.00     32.00   6273.00    370.88      0.14      8.18      4.35      7.40
+10:39:55 AM  dev249-9     52.00    128.00   9266.50    180.66      0.55     10.57      2.12     11.05
+10:39:55 AM dev249-10     48.00      0.00   9266.50    193.05      0.52     10.88      2.04      9.80
+10:39:55 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
+10:39:57 AM  dev65-64     17.00      0.00   6380.00    375.29      0.14      8.35      4.44      7.55
+10:39:57 AM  dev249-9     46.50      0.00   9531.00    204.97      0.52     11.19      2.12      9.85
+10:39:57 AM dev249-10     46.50      0.00   9531.00    204.97      0.49     10.62      1.99      9.25
+hostname:/root >
+
+
+
+
+hostname:/root >lsblk | grep 249:10
+├─vgoraredo-dw2_CDWP_blv  249:10   0   20G  0 lvm  /dw2/oraredob/CDWP
+└─vgoraredo-dw2_CDWP_blv  249:10   0   20G  0 lvm  /dw2/oraredob/CDWP
+└─vgoraredo-dw2_CDWP_blv  249:10   0   20G  0 lvm  /dw2/oraredob/CDWP
+
+
+
+
+hostname:/root >lsblk | grep 249:9
+├─vgoraredo-dw1_CDWP_alv  249:9    0   20G  0 lvm  /dw1/oraredoa/CDWP
+├─vgoraredo-dw1_CDWP_alv  249:9    0   20G  0 lvm  /dw1/oraredoa/CDWP
+├─vgoraredo-dw1_CDWP_alv  249:9    0   20G  0 lvm  /dw1/oraredoa/CDWP
+
+
+
+
+hostname:/root >lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+fd0                         2:0    1    4K  0 disk
+sda                         8:0    0   30G  0 disk
+├─sda1                      8:1    0  500M  0 part /boot
+└─sda2                      8:2    0 29.5G  0 part /
+sdb                         8:16   0    4T  0 disk
+└─sdb1                      8:17   0    4T  0 part /mnt
+sdc                         8:32   0   30G  0 disk
+└─vgswap-lvswap           249:3    0   20G  0 lvm  [SWAP]
+sdd                         8:48   0  250G  0 disk
+└─vgdata-lv01             249:15   0  200G  0 lvm  /oracle
+sde                         8:64   0   50G  0 disk
+├─vgroot-lv01             249:16   0    8G  0 lvm  /tmp
+├─vgroot-lv02             249:17   0    8G  0 lvm  /var/log/audit
+├─vgroot-lv03             249:18   0    8G  0 lvm  /var/log
+├─vgroot-lv04             249:19   0    5G  0 lvm  /var
+└─vgroot-lv05             249:20   0    8G  0 lvm  /var/tmp
+sdf                         8:80   0    4T  0 disk
+├─vgoradata-ms3_CMPD_lv   249:0    0    1T  0 lvm  /ms3/oradata/CMDP
+└─vgoradata-ods3_CODP_lv  249:2    0   14T  0 lvm  /ods3/oradata/CODP
+sdg                         8:96   0    4T  0 disk
+├─vgoradata-ms3_CMPD_lv   249:0    0    1T  0 lvm  /ms3/oradata/CMDP
+├─vgoradata-dw3_CDWP_lv   249:1    0   24T  0 lvm  /dw3/oradata/CDWP
+└─vgoradata-ods3_CODP_lv  249:2    0   14T  0 lvm  /ods3/oradata/CODP
+sdh                         8:112  0    4T  0 disk
+└─vgoradata-dw3_CDWP_lv   249:1    0   24T  0 lvm  /dw3/oradata/CDWP
+sdi                         8:128  0    4T  0 disk
+└─vgoradata-dw3_CDWP_lv   249:1    0   24T  0 lvm  /dw3/oradata/CDWP
+sdj                         8:144  0    4T  0 disk
+├─vgoradata-ms3_CMPD_lv   249:0    0    1T  0 lvm  /ms3/oradata/CMDP
+├─vgoradata-dw3_CDWP_lv   249:1    0   24T  0 lvm  /dw3/oradata/CDWP
+└─vgoradata-ods3_CODP_lv  249:2    0   14T  0 lvm  /ods3/oradata/CODP
+sdk                         8:160  0    4T  0 disk
+└─vgoradata-dw3_CDWP_lv   249:1    0   24T  0 lvm  /dw3/oradata/CDWP
+sdl                         8:176  0    4T  0 disk
+├─vgoradata-ms3_CMPD_lv   249:0    0    1T  0 lvm  /ms3/oradata/CMDP
+├─vgoradata-dw3_CDWP_lv   249:1    0   24T  0 lvm  /dw3/oradata/CDWP
+└─vgoradata-ods3_CODP_lv  249:2    0   14T  0 lvm  /ods3/oradata/CODP
+sdm                         8:192  0    4T  0 disk
+└─vgoradata-dw3_CDWP_lv   249:1    0   24T  0 lvm  /dw3/oradata/CDWP
+sdn                         8:208  0    4T  0 disk
+└─vgoradata-ods3_CODP_lv  249:2    0   14T  0 lvm  /ods3/oradata/CODP
+sdo                         8:224  0    4T  0 disk
+├─vgoradata-ms3_CMPD_lv   249:0    0    1T  0 lvm  /ms3/oradata/CMDP
+├─vgoradata-dw3_CDWP_lv   249:1    0   24T  0 lvm  /dw3/oradata/CDWP
+└─vgoradata-ods3_CODP_lv  249:2    0   14T  0 lvm  /ods3/oradata/CODP
+sdp                         8:240  0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+sdq                        65:0    0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+sdr                        65:16   0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+sds                        65:32   0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+sdt                        65:48   0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+sdu                        65:64   0 1023G  0 disk
+├─vgoraredo-ms1_CMPD_alv  249:5    0   20G  0 lvm  /ms1/oraredoa/CMDP
+├─vgoraredo-ms2_CMPD_blv  249:6    0   20G  0 lvm  /ms2/oraredob/CMDP
+├─vgoraredo-ods1_CODP_alv 249:7    0   20G  0 lvm  /ods1/oraredoa/CODP
+├─vgoraredo-ods2_CODP_blv 249:8    0   20G  0 lvm  /ods2/oraredob/CODP
+├─vgoraredo-dw1_CDWP_alv  249:9    0   20G  0 lvm  /dw1/oraredoa/CDWP
+├─vgoraredo-dw2_CDWP_blv  249:10   0   20G  0 lvm  /dw2/oraredob/CDWP
+└─vgoraredo-sbuac_lv      249:11   0   12G  0 lvm  /sbuac
+sdv                        65:80   0 1023G  0 disk
+├─vgoraredo-ms1_CMPD_alv  249:5    0   20G  0 lvm  /ms1/oraredoa/CMDP
+├─vgoraredo-ms2_CMPD_blv  249:6    0   20G  0 lvm  /ms2/oraredob/CMDP
+├─vgoraredo-ods1_CODP_alv 249:7    0   20G  0 lvm  /ods1/oraredoa/CODP
+├─vgoraredo-ods2_CODP_blv 249:8    0   20G  0 lvm  /ods2/oraredob/CODP
+├─vgoraredo-dw1_CDWP_alv  249:9    0   20G  0 lvm  /dw1/oraredoa/CDWP
+└─vgoraredo-dw2_CDWP_blv  249:10   0   20G  0 lvm  /dw2/oraredob/CDWP
+sdw                        65:96   0 1023G  0 disk
+├─vgoraredo-ms1_CMPD_alv  249:5    0   20G  0 lvm  /ms1/oraredoa/CMDP
+├─vgoraredo-ms2_CMPD_blv  249:6    0   20G  0 lvm  /ms2/oraredob/CMDP
+├─vgoraredo-ods1_CODP_alv 249:7    0   20G  0 lvm  /ods1/oraredoa/CODP
+├─vgoraredo-ods2_CODP_blv 249:8    0   20G  0 lvm  /ods2/oraredob/CODP
+├─vgoraredo-dw1_CDWP_alv  249:9    0   20G  0 lvm  /dw1/oraredoa/CDWP
+└─vgoraredo-dw2_CDWP_blv  249:10   0   20G  0 lvm  /dw2/oraredob/CDWP
+sdx                        65:112  0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+sdy                        65:128  0 1023G  0 disk
+├─vgoraarch-oraarch_lv    249:12   0    1T  0 lvm  /oraarch
+├─vgoraarch-oraexports_lv 249:13   0    2T  0 lvm  /oraexports
+└─vgoraarch-oradiag_lv    249:14   0  200G  0 lvm  /oradiag
+sdz                        65:144  0 1023G  0 disk
+├─vgoraarch-oraarch_lv    249:12   0    1T  0 lvm  /oraarch
+├─vgoraarch-oraexports_lv 249:13   0    2T  0 lvm  /oraexports
+└─vgoraarch-oradiag_lv    249:14   0  200G  0 lvm  /oradiag
+sdaa                       65:160  0 1023G  0 disk
+├─vgoraarch-oraarch_lv    249:12   0    1T  0 lvm  /oraarch
+├─vgoraarch-oraexports_lv 249:13   0    2T  0 lvm  /oraexports
+└─vgoraarch-oradiag_lv    249:14   0  200G  0 lvm  /oradiag
+sdab                       65:176  0 1023G  0 disk
+├─vgoraarch-oraarch_lv    249:12   0    1T  0 lvm  /oraarch
+├─vgoraarch-oraexports_lv 249:13   0    2T  0 lvm  /oraexports
+└─vgoraarch-oradiag_lv    249:14   0  200G  0 lvm  /oradiag
+sdac                       65:192  0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+sdad                       65:208  0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+sdae                       65:224  0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+sdaf                       65:240  0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+sdag                       66:0    0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+sdah                       66:16   0    4T  0 disk
+└─vgorastage-orastage_lv  249:4    0 47.9T  0 lvm  /staging
+
+
+
+
+
+
+
+hostname:/root >dmsetup info -c -o name,blkdevname,devnos_used,blkdevs_used
+Name                    BlkDevName       DevNosUsed                                                                 BlkDevNamesUsed
+vgoraarch-oraarch_lv    dm-12            65:128,65:160,65:176,65:144                                                sdy,sdaa,sdab,sdz
+vgoradata-ms3_CMPD_lv   dm-0             8:80,8:176,8:144,8:96,8:224                                                sdf,sdl,sdj,sdg,sdo
+vgoraredo-ods2_CODP_blv dm-8             65:80,65:96,65:64                                                          sdv,sdw,sdu
+vgoraredo-ods1_CODP_alv dm-7             65:80,65:96,65:64                                                          sdv,sdw,sdu
+vgoraarch-oraexports_lv dm-13            65:128,65:160,65:176,65:144                                                sdy,sdaa,sdab,sdz
+vgoraredo-ms2_CMPD_blv  dm-6             65:80,65:96,65:64                                                          sdv,sdw,sdu
+vgoraredo-ms1_CMPD_alv  dm-5             65:80,65:96,65:64                                                          sdv,sdw,sdu
+vgroot-lv05             dm-20            8:64                                                                       sde
+vgdata-lv01             dm-15            8:48                                                                       sdd
+vgorastage-orastage_lv  dm-4             66:0,65:240,66:16,65:224,65:208,65:192,65:112,65:32,65:16,65:48,65:0,8:240 sdag,sdaf,sdah,sdae,sdad,sdac,sdx,sds,sdr,sdt,sdq,sdp
+vgoraredo-sbuac_lv      dm-11            65:64                                                                      sdu
+vgoraredo-dw2_CDWP_blv  dm-10            65:80,65:96,65:64                                                          sdv,sdw,sdu
+vgoradata-ods3_CODP_lv  dm-2             8:176,8:144,8:96,8:224,8:208,8:80                                          sdl,sdj,sdg,sdo,sdn,sdf
+vgroot-lv04             dm-19            8:64                                                                       sde
+vgoraredo-dw1_CDWP_alv  dm-9             65:80,65:96,65:64                                                          sdv,sdw,sdu
+vgroot-lv03             dm-18            8:64                                                                       sde
+vgoraarch-oradiag_lv    dm-14            65:128,65:160,65:176,65:144                                                sdy,sdaa,sdab,sdz
+vgroot-lv02             dm-17            8:64                                                                       sde
+vgroot-lv01             dm-16            8:64                                                                       sde
+vgswap-lvswap           dm-3             8:32                                                                       sdc
+vgoradata-dw3_CDWP_lv   dm-1             8:176,8:144,8:96,8:224,8:112,8:128,8:192,8:160                             sdl,sdj,sdg,sdo,sdh,sdi,sdm,sdk
+
