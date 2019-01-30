@@ -1,0 +1,5 @@
+# create disk from Snapshot 
+az disk create -g resource_grp_name -n name_of_new_disk --source snaapshot_name
+
+# attach existing disk to VM
+az vm disk attach -g  resource_grp_name--vm-name vm-name --name name_of_new_disk
