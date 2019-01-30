@@ -1,3 +1,21 @@
+MEMORY and CPU TOP PROCESS
+hostname:/root >ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+   PID   PPID CMD                         %MEM %CPU
+ 85647  85101 /usr/sap/PP2/J02/exe/jstart 32.3  2.1
+ 85646  85101 /usr/sap/PP2/J02/exe/jstart 31.4  2.0
+ 99083  97505 /usr/local/ASR/Vx/bin/evtco  0.6  0.0
+   449      1 /usr/lib/systemd/systemd-jo  0.5  0.0
+ 49513      1 /usr/sbin/rsyslogd -n        0.4  0.0
+126762  97505 /usr/local/ASR/Vx/bin/s2 sv  0.2  0.0
+ 97505      1 /usr/local/ASR/Vx/bin/svage  0.2  0.1
+ 92938   1329 python -u bin/WALinuxAgent-  0.2  2.5
+ 59725      1 sapccmsr -DCCMS pf=/sapmnt/  0.2  0.0
+hostname:/root >
+
+
+
+
+DISK
 
 hostname:/root >sar 2 20  -d  | awk '$9 > 8{print $0}'
 10:39:25 AM       DEV       tps  rd_sec/s  wr_sec/s  avgrq-sz  avgqu-sz     await     svctm     %util
