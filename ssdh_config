@@ -1,0 +1,13 @@
+woz@macbook$ sudo vim /etc/ssh/sshd_config
+
+# Change PasswordAuthentication to this:
+PasswordAuthentication no
+
+# Change PubkeyAuthentication to this:
+PubkeyAuthentication yes
+
+# Change PermitRootLogin to this:
+PermitRootLogin no
+
+# Change ChallengeResponseAuthentication to this:
+ChallengeResponseAuthentication no
