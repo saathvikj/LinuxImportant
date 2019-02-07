@@ -1,0 +1,13 @@
+AMDC1DXXD2UPG:/ >df -h /amit
+Filesystem                     Size  Used Avail Use% Mounted on
+/dev/mapper/xttsdump-xttsdump  2.5T  1.2T  1.4T  45% /amit
+AMDC1DXXD2UPG:/ >df -h /xttsdump
+Filesystem                     Size  Used Avail Use% Mounted on
+/dev/mapper/xttsdump-xttsdump  2.5T  1.2T  1.4T  45% /xttsdump
+AMDC1DXXD2UPG:/ >grep "amit|xttsdump" /etc/fstab
+AMDC1DXXD2UPG:/ >egrep "amit|xttsdump" /etc/fstab
+UUID=54b58c86-a0c7-4432-81bf-398a409e5dcc       /xttsdump       xfs     defaults        0 0
+/dev/mapper/xttsdump-xttsdump /amit xfs     defaults        0 0
+AMDC1DXXD2UPG:/ >blkid /dev/mapper/xttsdump-xttsdump
+/dev/mapper/xttsdump-xttsdump: UUID="54b58c86-a0c7-4432-81bf-398a409e5dcc" TYPE="xfs"
+AMDC1DXXD2UPG:/ >
