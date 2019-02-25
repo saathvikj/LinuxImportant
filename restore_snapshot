@@ -1,0 +1,1 @@
+az disk create -g resource_grp -n new_disk_name --source snapshot_disk_name
