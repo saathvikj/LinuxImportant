@@ -1,0 +1,4 @@
+How to replace the existing root disk with new root disk?
+az vm update -g RESOURCE_GRP -n VM_NAME --os-disk /subscriptions/SUBSCRIPTION_ID_IN_NUMERIC/resourceGroups/RESOURCE_GRP/providers/Microsoft.Compute/disks/NAME_OF_NEW_ROOT_DISK
+
+
