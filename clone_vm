@@ -9,5 +9,4 @@ EnableAcceleratedNetworking    EnableIpForwarding    Location    Name           
 False                          False                 eastus      AMAZRUSEART2D01_primary  Succeeded            rg-csc-entsys-dev-sap  51f6d65a-33bf-453a-a2b1-1c299d1d2732
 RHELREPO:/root/azure_scripts/bin >
 RHELREPO:/root/azure_scripts/bin >az vm list-sizes  -l eastus
-RHELREPO:/root/azure_scripts/bin >az vm create -g RG-CSC-ENTSYS-DEV-SAP -n AMAZRUSEART2D01 --attach-os-disk amazruseart2d01_rootdisk --os-type linux --boot-diagnostics-storage rgcscentsysdevdiag  --location eastus --nics AMAZRUSEART2D01_primary --size Standard_E16_v3
-
+RHELREPO:/root/azure_scripts/bin >az vm create -g RG-CSC-ENTSYS-DEV-SAP -n AMAZRUSEART2D01 --attach-os-disk amazruseart2d01_rootdisk --os-type linux --boot-diagnostics-storage rgcscentsysdevdiag  --location eastus --nics AMAZRUSEART2D01_primary --size Standard_E16s_v3
