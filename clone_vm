@@ -1,0 +1,13 @@
+RHELREPO:/root/azure_scripts/bin >az network nic create --name AMAZRUSEART2D01_primary --resource-group RG-CSC-ENTSYS-DEV-SAP --subnet sn-entsys-dev-sap-usr-priv  --accelerated-networking false --location eastus --private-ip-address-version  IPv4 --vnet-name  vnet-entsys-dev
+RHELREPO:/root/azure_scripts/bin >my_id=`az network nic show  --resource-group rg-csc-entsys-dev-sap --name AMAZRUSEART2D01_primary  --query id|egrep -v "Result|------"`
+RHELREPO:/root/azure_scripts/bin >echo $my_id
+/subscriptions/83b7d931-4059-4f8a-a873-47316b0cb181/resourceGroups/rg-csc-entsys-dev-sap/providers/Microsoft.Network/networkInterfaces/AMAZRUSEART2D01_primary
+RHELREPO:/root/azure_scripts/bin >az resource move --destination-group rg-csc-entsys --ids $my_id --destination-subscription-id 83b7d931-4059-4f8a-a873-47316b0cb181
+RHELREPO:/root/azure_scripts/bin >az network nic update -g rg-csc-entsys-dev-sap -n AMAZRUSEART2D01_primary --network-security-group nsg-entsys-use-dev-sap-usr-priv
+EnableAcceleratedNetworking    EnableIpForwarding    Location    Name                     ProvisioningState    ResourceGroup          ResourceGuid
+-----------------------------  --------------------  ----------  -----------------------  -------------------  ---------------------  ------------------------------------
+False                          False                 eastus      AMAZRUSEART2D01_primary  Succeeded            rg-csc-entsys-dev-sap  51f6d65a-33bf-453a-a2b1-1c299d1d2732
+RHELREPO:/root/azure_scripts/bin >
+RHELREPO:/root/azure_scripts/bin >az vm list-sizes  -l eastus
+RHELREPO:/root/azure_scripts/bin >az vm create -g RG-CSC-ENTSYS-DEV-SAP -n AMAZRUSEART2D01 --attach-os-disk amazruseart2d01_rootdisk --os-type linux --boot-diagnostics-storage rgcscentsysdevdiag  --location eastus --nics AMAZRUSEART2D01_primary --size Standard_E16_v3
+
